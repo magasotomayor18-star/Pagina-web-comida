@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brasa Urbana, comida rápida preparada al momento con sabor casero en Quito.">
+  <title>Brasa Urbana | Comida rápida con actitud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Brasa Urbana, volver al inicio">
+        <span class="brand-mark" aria-hidden="true">BU</span>
+        <span>Brasa <strong>Urbana</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menú de navegación</span>
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegación principal">
+        <a href="#menu">Menú</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#historia">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a class="nav-order" href="#pedido">Mi pedido <span id="nav-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Hecho al momento en Quito</p>
+          <h1>El antojo tiene <em>nombre propio.</em></h1>
+          <p class="hero-text">Hamburguesas jugosas, papas crujientes y combos que llegan con toda la actitud. Sabor honesto, porciones generosas y cero aburrimiento.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Explorar el menú <span aria-hidden="true">&#8594;</span></a>
+            <a class="text-link" href="#promociones">Ver promociones <span aria-hidden="true">&#8599;</span></a>
+          </div>
+          <div class="hero-notes" aria-label="Características del restaurante">
+            <span><strong>15 min</strong> preparación promedio</span>
+            <span><strong>4.9/5</strong> favoritos del barrio</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Hamburguesa con queso, lechuga y tomate sobre una mesa de restaurante">
+            <div class="floating-tag"><span>★</span><strong>100%</strong><small>antojo real</small></div>
+          </div>
+          <div class="hero-sticker" aria-hidden="true">SABOR<br><strong>LOCAL</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="story section-pad">
+      <div class="container story-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow"><span></span> Nuestra historia</p>
+          <h2>Rápido no significa <em>hecho a la carrera.</em></h2>
+        </div>
+        <div class="story-copy reveal">
+          <p>Brasa Urbana nació de una idea simple: preparar comida rápida con ingredientes frescos, recetas con personalidad y ese sabor que te hace volver al día siguiente.</p>
+          <a class="text-link" href="#contacto">Conoce nuestro local <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section section-pad">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Lo que se te antoja</p>
+            <h2>Menú para <em>comerse el mundo.</em></h2>
+          </div>
+          <p class="section-description">Elige una categoría y arma tu momento favorito.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filtrar productos por categoría">
+          <button class="filter-button active" type="button" data-filter="todos">Todo</button>
+          <button class="filter-button" type="button" data-filter="hamburguesas">Hamburguesas</button>
+          <button class="filter-button" type="button" data-filter="acompanamientos">Acompañamientos</button>
+          <button class="filter-button" type="button" data-filter="combos">Combos</button>
+          <button class="filter-button" type="button" data-filter="bebidas">Bebidas</button>
+          <button class="filter-button" type="button" data-filter="postres">Postres</button>
+        </div>
+        <div id="product-grid" class="product-grid" aria-live="polite">
+          <article class="product-card" data-category="hamburguesas">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80" alt="Hamburguesa clásica con queso cheddar y papas fritas"><span class="product-label">Favorita</span></div>
+            <div class="product-info"><div><h3>La Urbana</h3><p>Carne de res, cheddar, cebolla caramelizada y salsa de la casa.</p></div><div class="product-bottom"><strong>$7.50</strong><button class="add-button" type="button" data-name="La Urbana" data-price="7.50" aria-label="Agregar La Urbana al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="hamburguesas">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=700&q=80" alt="Hamburguesa doble con queso y vegetales frescos"><span class="product-label spicy">Picante</span></div>
+            <div class="product-info"><div><h3>Doble Fuego</h3><p>Doble carne, pepper jack, jalapeños y mayonesa ahumada.</p></div><div class="product-bottom"><strong>$9.90</strong><button class="add-button" type="button" data-name="Doble Fuego" data-price="9.90" aria-label="Agregar Doble Fuego al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="acompanamientos">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80" alt="Papas fritas crujientes servidas en un recipiente rojo"></div>
+            <div class="product-info"><div><h3>Papas Bravas</h3><p>Papas doradas, sal de ajo y kétchup de la casa.</p></div><div class="product-bottom"><strong>$3.25</strong><button class="add-button" type="button" data-name="Papas Bravas" data-price="3.25" aria-label="Agregar Papas Bravas al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="acompanamientos">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=700&q=80" alt="Alitas de pollo doradas con salsa picante"><span class="product-label spicy">Picante</span></div>
+            <div class="product-info"><div><h3>Alitas 8 piezas</h3><p>Alitas crocantes bañadas en salsa búfalo o miel mostaza.</p></div><div class="product-bottom"><strong>$6.80</strong><button class="add-button" type="button" data-name="Alitas 8 piezas" data-price="6.80" aria-label="Agregar Alitas al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="combos">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1612392062631-94dd858cba88?auto=format&fit=crop&w=700&q=80" alt="Combo de hamburguesa con papas fritas y bebida"><span class="product-label combo">Mejor precio</span></div>
+            <div class="product-info"><div><h3>Combo Clásico</h3><p>La Urbana, papas medianas y bebida fría de 400 ml.</p></div><div class="product-bottom"><strong>$10.90</strong><button class="add-button" type="button" data-name="Combo Clásico" data-price="10.90" aria-label="Agregar Combo Clásico al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="bebidas">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1629203849820-fdd70d49c38e?auto=format&fit=crop&w=700&q=80" alt="Vaso de bebida gaseosa con hielo y rodaja de limón"></div>
+            <div class="product-info"><div><h3>Gaseosa fría</h3><p>Elige cola, naranja o limón. Servida con mucho hielo.</p></div><div class="product-bottom"><strong>$2.20</strong><button class="add-button" type="button" data-name="Gaseosa fría" data-price="2.20" aria-label="Agregar Gaseosa fría al pedido">+</button></div></div>
+          </article>
+          <article class="product-card" data-category="postres">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" alt="Helado suave de vainilla servido en un vaso con salsa de chocolate"></div>
+            <div class="product-info"><div><h3>Milkshake de vainilla</h3><p>Helado cremoso, vainilla natural y crema batida.</p></div><div class="product-bottom"><strong>$4.50</strong><button class="add-button" type="button" data-name="Milkshake de vainilla" data-price="4.50" aria-label="Agregar Milkshake de vainilla al pedido">+</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="promociones" class="promos-section section-pad">
+      <div class="container">
+        <div class="section-heading light reveal"><div><p class="eyebrow"><span></span> Para compartir</p><h2>Combos que llegan<br><em>con actitud.</em></h2></div><p class="section-description">Más sabor, más amigos, más razones para pedir.</p></div>
+        <div class="promo-grid">
+          <article class="promo-card promo-main reveal"><div><p class="promo-number">01</p><h3>Plan de panas</h3><p>2 hamburguesas, papas grandes, 8 alitas y 4 bebidas.</p><button class="button button-light add-promo" type="button" data-name="Plan de panas" data-price="24.90">Elegir combo <span aria-hidden="true">&#8594;</span></button></div><span class="promo-price">$24.90</span></article>
+          <article class="promo-card promo-secondary reveal reveal-delay"><div><p class="promo-number">02</p><h3>Martes de brasa</h3><p>Tu hamburguesa favorita con papas por solo $6.90.</p><button class="text-link light-link add-promo" type="button" data-name="Martes de brasa" data-price="6.90">Lo quiero <span aria-hidden="true">&#8594;</span></button></div><span class="promo-price">$6.90</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pedido" class="order-section section-pad">
+      <div class="container order-grid">
+        <div class="order-copy reveal"><p class="eyebrow"><span></span> Tu selección</p><h2>Arma tu pedido<br><em>sin complicaciones.</em></h2><p>Agrega tus favoritos y revisa el resumen. Esta demostración no realiza pagos reales.</p><a href="#menu" class="text-link">Seguir explorando <span aria-hidden="true">&#8594;</span></a></div>
+        <div class="order-panel reveal reveal-delay"><div class="order-panel-head"><h3>Resumen del pedido</h3><span id="order-count">0 productos</span></div><div id="order-items" class="order-items"><p class="empty-order">Todavía no has elegido nada.<br><a href="#menu">Explora el menú para comenzar.</a></p></div><div class="order-total"><span>Total estimado</span><strong id="order-total">$0.00</strong></div><button id="confirm-order" class="button button-primary full-button" type="button" disabled>Simular pedido</button><p id="order-message" class="order-message" role="status" aria-live="polite"></p></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section section-pad">
+      <div class="container contact-grid">
+        <div class="contact-info reveal"><p class="eyebrow"><span></span> Ven a visitarnos</p><h2>Nos vemos<br><em>en la mesa.</em></h2><div class="contact-details"><div><span class="detail-icon" aria-hidden="true">&#9673;</span><p><strong>Encuéntranos</strong>Av. 6 de Diciembre y Whymper<br>Quito, Ecuador</p></div><div><span class="detail-icon" aria-hidden="true">&#9716;</span><p><strong>Horarios</strong>Lunes a domingo<br>12:00 - 22:30</p></div><div><span class="detail-icon" aria-hidden="true">&#9742;</span><p><strong>Contáctanos</strong><a href="tel:+593998765432">+593 99 876 5432</a><br><a href="mailto:hola@brasaurbana.ec">hola@brasaurbana.ec</a></p></div></div></div>
+        <div class="gallery reveal reveal-delay" aria-label="Galería de comida rápida"><img class="gallery-large" src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=900&q=85" alt="Tacos dorados con vegetales frescos y salsa"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=85" alt="Pizza individual recién horneada con queso fundido"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=85" alt="Dona glaseada de chocolate sobre una mesa de madera"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">BU</span><span>Brasa <strong>Urbana</strong></span></a><p>Hecho con hambre y buena onda.</p><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></div><p class="copyright">© 2026 Brasa Urbana</p></div></footer>
+</body>
+</html>
